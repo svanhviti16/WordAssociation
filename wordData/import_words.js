@@ -1,7 +1,9 @@
+// imports all "skyldheiti" from the Orðanet API. 
+
 var rp = require('request-promise');
 
 var options = {
-    //uri :'http://nidhoggur.rhi.hi.is/ordanet-api/api/skyldheiti',
+    // Limit set as the total number of entries
     uri :'http://nidhoggur.rhi.hi.is/ordanet-api/api/skyldheiti/?limit=264978',
     headers: {
         'User-Agent': 'Request-Promise'
