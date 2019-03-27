@@ -1,6 +1,6 @@
 # Orðavensl
 
-Python-bakendi fyrir orðavenslaleik í námskeiðinu Málleg gagnasöfn í Háskóla Íslands vorönn 2019. 
+Python-bakendi fyrir orðavenslaleik í námskeiðinu Málleg gagnasöfn í Háskóla Íslands vorönn 2019. Leikurinn notar gögn úr [Íslensku orðaneti](http://ordanet.is). Framendinn er á https://github.com/svanhviti16/WordAssociationFront/.
 
 Til að setja upp nauðsynlega pakka þarf að keyra skipunina
 
