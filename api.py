@@ -5,7 +5,7 @@ from reynir.bincompress import BIN_Compressed
 
 #database
 from peewee import *
-db = SqliteDatabase('wordsfromusers.db')
+db = SqliteDatabase('userwords.db')
 
 class Frumfletta(Model):
     frumfletta = CharField(unique=True)
@@ -44,7 +44,6 @@ def get_word(req, resp):
     user_words = {}
     for entry in UserInput.select(UserInput, Frumfletta).join(Frumfletta).where(Frumfletta.frumfletta == word):
         user_words[entry.word] = entry.count
-    print(user_words)
 
     resp.media = { 'frumfletta': word,
                   'skyldflettur': related_words,
@@ -55,8 +54,7 @@ def get_word(req, resp):
 def is_valid_word(req, resp, *, userword, frumfletta):
     user_word = unquote(userword)
     frumfletta = unquote(frumfletta)
-    print(user_word)
-    print(bool(bin.lookup(user_word)))
+    #print(user_word)
     resp.media = {'is_valid': bool(bin.lookup(user_word))}
 
     # checks if word exists, returns two values
